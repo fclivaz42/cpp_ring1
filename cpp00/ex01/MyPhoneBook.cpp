@@ -6,15 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 17:03:29 by fclivaz           #+#    #+#             */
-/*   Updated: 2023/12/16 18:02:13 by fclivaz          ###   ########.fr       */
+/*   Updated: 2024/03/04 16:02:50 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstring>
-#include <iostream>
-#include <string>
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
+#include "MyPhoneBook.hpp"
 
 int main(void)
 {	
@@ -29,7 +25,7 @@ int main(void)
 			std::cout << "SEARCHING" << std::endl;
 		else if (!buf.compare("EXIT")) {
 
-			exit(0);
+			return(0);
 		}
 	}
 }

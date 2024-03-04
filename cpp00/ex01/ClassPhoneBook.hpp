@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   ClassPhoneBook.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 17:55:33 by fclivaz           #+#    #+#             */
-/*   Updated: 2023/12/16 18:02:00 by fclivaz          ###   ########.fr       */
+/*   Created: 2023/12/16 17:41:40 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/03/04 17:25:37 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_H
-# define CONTACT_H
+#ifndef CLASSPHONEBOOK_H
+# define CLASSPHONEBOOK_H
 
-#include <string>
-class Contact {
+# include "MyPhoneBook.hpp"
 
-public:
-	CreateContact(std::string FName, std::string LName, std::string SName, int Number, std::string, std::string Secret);
+class Contact;
+
+class PhoneBook
+{
+	Contact contacts[8];
+	
+	public:
+		PhoneBook(void);
+		~PhoneBook(void);
+		void Search(void);
 };
 
 #endif

@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   ClassContact.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 02:13:28 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/04 14:56:44 by fclivaz          ###    LAUSANNE.CH      */
+/*   Created: 2024/03/04 15:27:22 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/03/04 16:04:53 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cctype>
-#include <cstring>
-#include <iostream>
+#include "ClassContact.hpp"
 
-int main(int ac, char *av[])
+Contact::Contact(void)
 {
-	if (ac < 2)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	for (int x = 1; x < ac; ++x)
+	std::cout << "Contact called." << std::endl;
+}
+
+Contact::~Contact(void)
+{
+	std::cout << "Contact destroyed." << std::endl;
+}
+
+void	Newcontact(void)
+{
+	char		valid;
+	std::string	input;
+
+	for (int i = 0; i < 4; ++i)
 	{
-		for (int i = 0; i < strlen(av[x]); ++i)
-			std::cout << (char)toupper(av[x][i]);
-		std::cout << " ";
+
 	}
-	std::cout << std::endl;
-	return 0;
 }

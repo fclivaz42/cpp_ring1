@@ -30,5 +30,6 @@
 *.exe
 *.out
 *.app
-
+megaphone
+phonebook
 .DS_Store
