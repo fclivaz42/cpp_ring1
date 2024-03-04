@@ -32,4 +32,5 @@
 *.app
 megaphone
 phonebook
+Session.vim
 .DS_Store
