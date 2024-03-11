@@ -10,7 +10,7 @@ CC	= c++
 
 NAME	= phonebook
 
-INCL	= ClassContact.hpp ClassPhoneBook.hpp MyPhoneBook.hpp
+INCL	= incl/
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o} ${LFLAGS}

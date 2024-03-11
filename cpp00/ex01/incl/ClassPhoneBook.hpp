@@ -6,25 +6,26 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 17:41:40 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/04 17:25:37 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/03/11 14:35:50 by fclivaz          ###   LAUSANNE.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSPHONEBOOK_H
-# define CLASSPHONEBOOK_H
+#ifndef CLASSPHONEBOOK_HPP
+# define CLASSPHONEBOOK_HPP
 
-# include "MyPhoneBook.hpp"
-
-class Contact;
+# include "ClassContact.hpp"
 
 class PhoneBook
 {
-	Contact contacts[8];
+	private:
+		char	_count;
+		Contact _ct[8];
 	
 	public:
 		PhoneBook(void);
 		~PhoneBook(void);
 		void Search(void);
+		void Add(int id);
 };
 
 #endif
