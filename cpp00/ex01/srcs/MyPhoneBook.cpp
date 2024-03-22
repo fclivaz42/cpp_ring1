@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 17:03:29 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/11 14:01:31 by fclivaz          ###   LAUSANNE.fr       */
+/*   Updated: 2024/03/22 20:31:52 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "incl/MyPhoneBook.hpp"
+# include "../incl/MyPhoneBook.hpp"
 
 int main(void)
 {	
@@ -24,12 +24,10 @@ int main(void)
 		std::cout << "Command (ADD/SEARCH/EXIT) >> ";
 		std::getline(std::cin, buf);
 		if (!buf.compare("ADD")) {
-			std::cout << "ADDING \n";
 			book.Add(id);
 			++id;
 		}
 		else if (!buf.compare("SEARCH")) {
-			std::cout << "SEARCHING \n";
 			book.Search();
 		}
 		else if (!buf.compare("EXIT")) {

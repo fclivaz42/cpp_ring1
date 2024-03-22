@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 17:41:40 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/11 14:35:50 by fclivaz          ###   LAUSANNE.fr       */
+/*   Updated: 2024/03/22 20:40:18 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,24 @@
 # define CLASSPHONEBOOK_HPP
 
 # include "ClassContact.hpp"
+# include <array>
+# include <string>
+# include <iostream>
+# include <iomanip>
+# define VCHARS "─│├┤┴┬└┘┌┐"
 
 class PhoneBook
 {
 	private:
 		char	_count;
 		Contact _ct[8];
+		void DisplayContact(int id);
+		void NewLine(const std::string &separator);
+		void PrintContent(const std::string &ID,
+							const std::string &Name,
+							const std::string &LName,
+							const std::string &NName,
+							const std::string &Separator);
 	
 	public:
 		PhoneBook(void);

@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 15:27:22 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/11 14:29:23 by fclivaz          ###   LAUSANNE.fr       */
+/*   Updated: 2024/03/22 20:31:41 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "incl/ClassContact.hpp"
+#include "../incl/ClassContact.hpp"
 
 Contact::Contact(void)
 {

@@ -1,6 +1,18 @@
-SRCS	= MyPhoneBook.cpp ClassPhoneBook.cpp ClassContact.cpp
+# MAKEFILE #
 
-OBJS	= ${SRCS:.cpp=.o}
+SRCS	= ${SUBDIR}/MyPhoneBook.cpp\
+		  ${SUBDIR}/ClassPhoneBook.cpp\
+		  ${SUBDIR}/ClassContact.cpp
+
+SUBDIR	= srcs
+
+OBJ		= $(SRCS:${SUBDIR}/%.cpp=${OBJDIR}/%.o)
+
+OBJDIR	= objs
+
+SRCTREE	= $(shell find srcs -type d)
+
+OBJTREE	= $(SRCTREE:srcs%=${OBJDIR}%)
 
 CFLAGS	= -Wall -Werror -Wextra -O2 -std=c++98
 
@@ -10,25 +22,79 @@ CC	= c++
 
 NAME	= phonebook
 
-INCL	= incl/
+INCL	= incl
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o} ${LFLAGS}
+DEPS	=	${INCL}/ClassContact.hpp\
+			${INCL}/ClassPhoneBook.hpp\
+			${INCL}/MyPhoneBook.hpp\
+			${SRCS}
 
-${NAME}:	${OBJS}
-		${CC} -o ${NAME} ${OBJS}  ${LFLAGS}
+CRED = \033[1;31m
+CGRN = \033[1;32m
+CYEL = \033[1;33m
+RSET = \033[0m
 
 all:	${NAME}
 
-debug:
-	${CC} -o ${NAME} ${SRCS} -g3 -fsanitize=address
+${NAME}:	${DEPS}
+		@${MAKE} ${OBJ}
+		@printf "│\tSources for ${CGRN}${NAME}${RSET} done.\n"
+		@${CC} ${OBJ} -o ${NAME} ${LFLAGS}
+		@printf "├──────────\n├─>>> ${CGRN}${NAME}${RSET} compiled!\n└──────────\n"
+
+${OBJDIR}/%.o:	${SUBDIR}/%.cpp | ${OBJDIR}
+				@printf "│\t > Compiling ${CYEL}$<${RSET} for ${CGRN}${NAME}${RSET}...\r"
+				@${CC} ${CFLAGS} -c $< -o $@ -I${INCL}
+				@printf "\33[2K"
+
+${OBJDIR}:
+		@printf "┌──────────\n"
+		@printf "│ Compiling ${CGRN}${NAME}${RSET}...\n"
+		@printf "│\tCreating ${CYEL}${OBJTREE}${RSET} for ${CGRN}${NAME}${RSET}\n"
+		@mkdir -p ${OBJTREE}
 
 clean:
-	rm -f ${OBJS}
+		@if [[ $(if $(filter r,${MAKECMDGOALS}),1,0) == "1" ]]; then \
+			printf "├──────────\n"; \
+		else \
+			printf "┌──────────\n"; \
+		fi
+		@if [ -d "./${OBJDIR}" ]; then \
+			printf "│\tRemoving ${CRED}${OBJDIR}${RSET} for ${CYEL}${NAME}${RSET}\n"; \
+			rm -rf ${OBJDIR}; \
+		else \
+			if [[ $(if $(filter fclean,${MAKECMDGOALS}),1,0) == "1" ]]; then \
+				printf "│\t${CYEL}${OBJDIR}${RSET} already removed!\n├──────────\n"; \
+			else \
+				printf "│\t${CYEL}${OBJDIR}${RSET} already removed!\n└──────────\n"; \
+			fi; \
+		fi
+		@if [ -d "./${NAME}.dSYM" ]; then \
+			printf "│\tRemoving ${CYEL}${NAME}.dSYM${RSET}\n"; \
+			rm -rf ${NAME}.dSYM; \
+		fi
 
 fclean: clean
-	rm -f ${NAME}
+		@if [ -e "./${NAME}" ]; then \
+			if [[ $(if $(filter r,${MAKECMDGOALS}),1,0) == "1" ]]; then \
+				printf "│\tRemoving ${CYEL}${NAME}${RSET}\n├──────────\n"; \
+			else \
+				printf "│\tRemoving ${CYEL}${NAME}${RSET}\n└──────────\n"; \
+			fi; \
+			rm -f ${NAME}; \
+		else \
+			if [[ $(if $(filter r,${MAKECMDGOALS}),1,0) == "1" ]]; then \
+				printf "│\t${CYEL}${NAME}${RSET} already removed!\n├──────────\n"; \
+			else \
+				printf "│\t${CYEL}${NAME}${RSET} already removed!\n└──────────\n"; \
+			fi; \
+		fi
 
-re:	fclean all
+re:
+		@printf "\n┌──────────\n│ Cleaning and ${CGRN}recompiling${RSET}...\n"
+		@${MAKE} fclean r
+		@${MAKE} all r
 
 .PHONY: all fclean clean re
+
+$(eval r:;@:)

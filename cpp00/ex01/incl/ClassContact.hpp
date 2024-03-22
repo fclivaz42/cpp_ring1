@@ -6,14 +6,14 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 17:55:33 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/11 14:29:28 by fclivaz          ###   LAUSANNE.fr       */
+/*   Updated: 2024/03/22 17:58:49 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLASSCONTACT_HPP
 # define CLASSCONTACT_HPP
 
-#include <array>
+# include <array>
 # include <string>
 # include <iostream>
 # include <iomanip>
