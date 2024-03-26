@@ -1,5 +1,7 @@
 # MAKEFILE #
 
+export MAKEFLAGS += --silent
+
 SRCS	= ${SUBDIR}/MyPhoneBook.cpp\
 		  ${SUBDIR}/ClassPhoneBook.cpp\
 		  ${SUBDIR}/ClassContact.cpp

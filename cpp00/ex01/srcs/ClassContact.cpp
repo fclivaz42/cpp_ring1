@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 15:27:22 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/22 20:31:41 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/03/26 18:26:58 by fclivaz          ###   LAUSANNE.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,25 +37,37 @@ std::string	Contact::UserInput(const std::string &text)
 	return (buf);
 }
 
-std::array<std::string, 5> Contact::GetUserData()
-{
-	std::array<std::string, 5>	Data;
-	
-	Data.at(0) = this->_FName;
-	Data.at(1) = this->_LName;
-	Data.at(2) = this->_NName;
-	Data.at(3) = this->_number;
-	Data.at(4) = this->_Secret;
-	
-	return Data;
-}
-
 void  Contact::CreateContact(void)
 {
 	this->_FName = UserInput("First name");
 	this->_LName = UserInput("Last name");
 	this->_NName = UserInput("Nickname");
-	this->_number = UserInput("Number");
+	this->_Number = UserInput("Number");
 	this->_Secret = UserInput("Darkest secret");
 	this->init = 1;
+}
+
+std::string Contact::GetFName(void)
+{
+	return this->_FName;
+}
+
+std::string Contact::GetLName(void)
+{
+	return this->_LName;
+}
+
+std::string Contact::GetNName(void)
+{
+	return this->_NName;
+}
+
+std::string Contact::GetNumber(void)
+{
+	return this->_Number;
+}
+
+std::string Contact::GetSecret(void)
+{
+	return this->_Secret;
 }

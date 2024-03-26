@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 17:41:40 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/22 20:40:18 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/03/26 18:30:57 by fclivaz          ###   LAUSANNE.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 # define CLASSPHONEBOOK_HPP
 
 # include "ClassContact.hpp"
-# include <array>
 # include <string>
+# include <stdlib.h>
 # include <iostream>
 # include <iomanip>
-# define VCHARS "─│├┤┴┬└┘┌┐"
 
 class PhoneBook
 {

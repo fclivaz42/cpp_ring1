@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 15:06:24 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/22 20:40:11 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/03/26 18:28:32 by fclivaz          ###   LAUSANNE.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,21 +60,17 @@ void	PhoneBook::PrintContent(const std::string &ID, const std::string &Name, con
 
 void	PhoneBook::DisplayContact(int id)
 {
-	std::array<std::string, 5> CData;
-	
-	CData = this->_ct[id].GetUserData();
 	std::cout << "\n┌──────────\n";
-	std::cout << "│First Name:\t" << CData.at(0) << "\n";
-	std::cout << "│last Name:\t" << CData.at(1) << "\n";
-	std::cout << "│Nickname:\t" << CData.at(2) << "\n";
-	std::cout << "│Number:\t" << CData.at(3) << "\n";
-	std::cout << "│Dark Secret:\t" << CData.at(4) << "\n";
+	std::cout << "│First Name:\t" << this->_ct[id].GetFName() << "\n";
+	std::cout << "│last Name:\t" << this->_ct[id].GetLName() << "\n";
+	std::cout << "│Nickname:\t" << this->_ct[id].GetNName() << "\n";
+	std::cout << "│Number:\t" << this->_ct[id].GetNumber() << "\n";
+	std::cout << "│Dark Secret:\t" << this->_ct[id].GetSecret() << "\n";
 	std::cout << "└──────────\n\n";
 }
 
 void	PhoneBook::Search(void)
 {
-	std::array<std::string, 5> CData;
 	std::string buf = "\n├";
 	char cid[2];
 
@@ -92,12 +88,11 @@ void	PhoneBook::Search(void)
 	{
 		if (!this->_ct[id].init)
 			break;
-		CData = this->_ct[id].GetUserData();
 		cid[0] = id + '1';
 		cid[1] = 0;
 		if (!this->_ct[id + 1].init)
 			buf = "\n└";
-		PrintContent(cid, CData.at(0), CData.at(1), CData.at(2), buf);
+		PrintContent(cid, this->_ct[id].GetFName(),this->_ct[id].GetLName(), this->_ct[id].GetNName(), buf);
 		if (this->_ct[id + 1].init)
 		{
 			NewLine("┼");
