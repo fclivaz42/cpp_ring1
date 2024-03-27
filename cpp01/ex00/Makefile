@@ -2,9 +2,10 @@
 
 export MAKEFLAGS += --silent
 
-SRCS	= ${SUBDIR}/MyPhoneBook.cpp\
-		  ${SUBDIR}/ClassPhoneBook.cpp\
-		  ${SUBDIR}/ClassContact.cpp
+SRCS	= ${SUBDIR}/main.cpp\
+		  ${SUBDIR}/Zombie.cpp\
+		  ${SUBDIR}/newZombie.cpp\
+		  ${SUBDIR}/randomChump.cpp
 
 SUBDIR	= srcs
 
@@ -22,13 +23,12 @@ LFLAGS = -I${INCL}
 
 CC	= c++
 
-NAME	= phonebook
+NAME	= brainz
 
 INCL	= incl
 
-DEPS	=	${INCL}/ClassContact.hpp\
-			${INCL}/ClassPhoneBook.hpp\
-			${INCL}/MyPhoneBook.hpp\
+DEPS	=	${INCL}/Zombie.h\
+			${INCL}/Zombie.hpp\
 			${SRCS}
 
 CRED = \033[1;31m
@@ -90,7 +90,7 @@ fclean: clean
 			rm -f ${NAME}; \
 		else \
 			if [[ $(if $(filter r,${MAKECMDGOALS}),1,0) == "1" ]]; then \
-				printf "│\t${CYEL}${NAME}${RSET} already removed!\n"; \
+				printf "│\t${CYEL}${NAME}${RSET} already removed!\n├──────────\n"; \
 			else \
 				printf "│\t${CYEL}${NAME}${RSET} already removed!\n└──────────\n"; \
 			fi; \

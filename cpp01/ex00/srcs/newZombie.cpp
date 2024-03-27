@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MyPhoneBook.hpp                                    :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 15:09:01 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/27 20:54:13 by fclivaz          ###    LAUSANNE.CH      */
+/*   Created: 2024/03/27 22:04:30 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/03/27 22:04:51 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MYPHONEBOOK_HPP
-# define MYPHONEBOOK_HPP
+#include "../incl/Zombie.h"
 
-# include <iostream>
-# include <iomanip>
-# include <string>
-# include "ClassPhoneBook.hpp"
-# include "ClassContact.hpp"
+Zombie*	newZombie(std::string name)
+{
+	Zombie*	heap;
 
-#endif
+	heap = new Zombie(name);
+	return heap;
+}

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MyPhoneBook.hpp                                    :+:      :+:    :+:   */
+/*   Zombie.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 15:09:01 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/27 20:54:13 by fclivaz          ###    LAUSANNE.CH      */
+/*   Created: 2024/03/27 21:17:48 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/03/27 22:08:58 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MYPHONEBOOK_HPP
-# define MYPHONEBOOK_HPP
+#ifndef ZOMBIE_H
+# define ZOMBIE_H
 
-# include <iostream>
-# include <iomanip>
-# include <string>
-# include "ClassPhoneBook.hpp"
-# include "ClassContact.hpp"
+#include "Zombie.hpp"
+
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif

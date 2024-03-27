@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MyPhoneBook.hpp                                    :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 15:09:01 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/27 20:54:13 by fclivaz          ###    LAUSANNE.CH      */
+/*   Created: 2024/03/27 20:51:26 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/03/27 22:06:28 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MYPHONEBOOK_HPP
-# define MYPHONEBOOK_HPP
+#include "../incl/Zombie.hpp"
+#include <iostream>
 
-# include <iostream>
-# include <iomanip>
-# include <string>
-# include "ClassPhoneBook.hpp"
-# include "ClassContact.hpp"
+Zombie::Zombie(std::string name) : _Name(name)
+{
+	std::cout << "New Zombie with name " << name << std::endl;
+}
 
-#endif
+Zombie::~Zombie(void)
+{
+	std::cout << "Zombie with name " << this->_Name << " is DEAD as FU-" << std::endl;
+}
+
+void	Zombie::announce(void)
+{
+	std::cout << this->_Name << ": BraiiiiiiinnnzzzZ...\n";
+}

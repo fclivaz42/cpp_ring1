@@ -32,5 +32,7 @@
 *.app
 megaphone
 phonebook
+GBU
+*.log
 Session.vim
 .DS_Store

@@ -36,6 +36,11 @@ RSET = \033[0m
 all:	${NAME}
 
 ${NAME}:	${DEPS}
+		@if [[ $(if $(filter r,${MAKECMDGOALS}),1,0) == "1" ]]; then \
+			printf "├──────────\n"; \
+		else \
+			printf "┌──────────\n"; \
+		fi
 		@${MAKE} ${OBJ}
 		@printf "│\tSources for ${CGRN}${NAME}${RSET} done.\n"
 		@${CC} ${OBJ} -o ${NAME} ${LFLAGS}
@@ -47,7 +52,6 @@ ${OBJDIR}/%.o:	${SUBDIR}/%.cpp | ${OBJDIR}
 				@printf "\33[2K"
 
 ${OBJDIR}:
-		@printf "┌──────────\n"
 		@printf "│ Compiling ${CGRN}${NAME}${RSET}...\n"
 		@printf "│\tCreating ${CYEL}${OBJTREE}${RSET} for ${CGRN}${NAME}${RSET}\n"
 		@mkdir -p ${OBJTREE}
@@ -76,7 +80,7 @@ clean:
 fclean: clean
 		@if [ -e "./${NAME}" ]; then \
 			if [[ $(if $(filter r,${MAKECMDGOALS}),1,0) == "1" ]]; then \
-				printf "│\tRemoving ${CYEL}${NAME}${RSET}\n├──────────\n"; \
+				printf "│\tRemoving ${CYEL}${NAME}${RSET}\n"; \
 			else \
 				printf "│\tRemoving ${CYEL}${NAME}${RSET}\n└──────────\n"; \
 			fi; \

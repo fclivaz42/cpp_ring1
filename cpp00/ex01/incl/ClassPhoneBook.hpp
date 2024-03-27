@@ -6,12 +6,12 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 17:41:40 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/26 19:01:51 by fclivaz          ###   LAUSANNE.fr       */
+/*   Updated: 2024/03/27 20:54:01 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CLASSPHONEBOOK_H__
-# define __CLASSPHONEBOOK_H__
+#ifndef CLASSPHONEBOOK_HPP
+# define CLASSPHONEBOOK_HPP
 
 # include "ClassContact.hpp"
 # include <string>
