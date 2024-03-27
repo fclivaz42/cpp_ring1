@@ -51,7 +51,7 @@ ${NAME}:	${DEPS}
 
 ${OBJDIR}/%.o:	${SUBDIR}/%.cpp | ${OBJDIR}
 				@printf "│\t > Compiling ${CYEL}$<${RSET} for ${CGRN}${NAME}${RSET}...\r"
-				@${CC} ${CFLAGS} -c $< -o $@ -I${INCL}
+				@${CC} ${CFLAGS} -c $< -o $@ ${LFLAGS}
 				@printf "\33[2K"
 
 ${OBJDIR}:

@@ -22,7 +22,7 @@ LFLAGS = -I${INCL}
 
 CC	= c++
 
-NAME	= zombiehorde
+NAME	= violence
 
 INCL	= incl
 

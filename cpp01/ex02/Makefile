@@ -2,9 +2,7 @@
 
 export MAKEFLAGS += --silent
 
-SRCS	= ${SUBDIR}/main.cpp\
-		  ${SUBDIR}/Zombie.cpp\
-		  ${SUBDIR}/ZombieHorde.cpp
+SRCS	= ${SUBDIR}/main.cpp
 
 SUBDIR	= srcs
 
@@ -18,17 +16,13 @@ OBJTREE	= $(SRCTREE:srcs%=${OBJDIR}%)
 
 CFLAGS	= -Wall -Werror -Wextra -O2 -std=c++98
 
-LFLAGS = -I${INCL}
+LFLAGS = 
 
 CC	= c++
 
-NAME	= zombiehorde
+NAME	= String
 
-INCL	= incl
-
-DEPS	=	${INCL}/Zombie.h\
-			${INCL}/Zombie.hpp\
-			${SRCS}
+DEPS	=	${SRCS}
 
 CRED = \033[1;31m
 CGRN = \033[1;32m
