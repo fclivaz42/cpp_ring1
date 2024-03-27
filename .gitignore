@@ -33,6 +33,7 @@
 megaphone
 phonebook
 GBU
+brainz
 *.log
 Session.vim
 .DS_Store
