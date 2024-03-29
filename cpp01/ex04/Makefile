@@ -2,10 +2,7 @@
 
 export MAKEFLAGS += --silent
 
-SRCS	= ${SUBDIR}/main.cpp\
-		  ${SUBDIR}/Weapon.cpp\
-		  ${SUBDIR}/HumanA.cpp\
-		  ${SUBDIR}/HumanB.cpp
+SRCS	= ${SUBDIR}/streplace.cpp\
 
 SUBDIR	= srcs
 
@@ -23,13 +20,11 @@ LFLAGS = -I${INCL}
 
 CC	= c++
 
-NAME	= violence
+NAME	= streplace
 
 INCL	= incl
 
-DEPS	=	${INCL}/Weapon.hpp\
-			${INCL}/HumanA.hpp\
-			${INCL}/HumanB.hpp\
+DEPS	=	${INCL}/streplace.hpp\
 			${SRCS}
 
 CRED = \033[1;31m
