@@ -3,8 +3,9 @@
 export MAKEFLAGS += --silent
 
 SRCS	= ${SUBDIR}/main.cpp\
-		  ${SUBDIR}/Zombie.cpp\
-		  ${SUBDIR}/ZombieHorde.cpp
+		  ${SUBDIR}/Weapon.cpp\
+		  ${SUBDIR}/HumanA.cpp\
+		  ${SUBDIR}/HumanB.cpp\
 
 SUBDIR	= srcs
 
@@ -26,8 +27,9 @@ NAME	= violence
 
 INCL	= incl
 
-DEPS	=	${INCL}/Zombie.h\
-			${INCL}/Zombie.hpp\
+DEPS	=	${INCL}/Weapon.hpp\
+			${INCL}/HumanA.hpp\
+			${INCL}/HumanB.hpp\
 			${SRCS}
 
 CRED = \033[1;31m
