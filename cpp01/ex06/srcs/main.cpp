@@ -5,31 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/29 17:11:45 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/30 17:01:08 by fclivaz          ###    LAUSANNE.CH      */
+/*   Created: 2024/03/29 20:09:00 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/03/30 17:02:14 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/Weapon.hpp"
-#include "../incl/HumanA.hpp"
-#include "../incl/HumanB.hpp"
+#include "../incl/Harl.hpp"
 
-int main(void)
+int main(int ac, char *av[])
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+	Harl		output;
+	
+	if (ac != 2) {
+		output.complain("invalid");
+		return 0;
 	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	output.complain(av[1]);
 }
