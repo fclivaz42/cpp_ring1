@@ -21,7 +21,7 @@ LFLAGS = -I${INCL}
 
 CC	= c++
 
-NAME	= violence
+NAME	= harl
 
 INCL	= incl
 

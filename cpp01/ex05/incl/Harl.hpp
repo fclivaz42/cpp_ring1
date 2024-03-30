@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 19:52:28 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/29 19:57:02 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/03/30 16:32:11 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,18 @@
 
 class Harl
 {
-	public:
-		Harl();
-		~Harl();
-		void	complain(std::string level);
-
 	private:
 		void	debug(void);
 		void	info(void);
 		void	warning(void);
 		void	error(void);
+
+	public:
+		Harl();
+		~Harl();
+		void	complain(std::string level);
+
+	typedef void	(Harl::*f)(void);
 };
 
 #endif
