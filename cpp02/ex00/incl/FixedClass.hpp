@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   streplace.hpp                                      :+:      :+:    :+:   */
+/*   FixedClass.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/29 18:34:35 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/04 22:47:54 by fclivaz          ###    LAUSANNE.CH      */
+/*   Created: 2024/04/04 20:42:14 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/04/04 20:55:06 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STREPLACE_HPP
-# define STREPLACE_HPP
+#include <iostream>
 
-# include <cstddef>
-# include <fstream>
-# include <iostream>
-# include <ostream>
-# include <string>
-# include <ios>
+class Fixed {
+	private:
+	int					_fixedNumber;
+	const static int	_fixedPoint = 8;
 
-#endif
+	public:
+		Fixed(void);
+		Fixed(const Fixed &src);
+		Fixed& operator=(const Fixed &src);
+		~Fixed(void);
+		int		getRawBits(void);
+		void	setRawBits(int rawBits);
+};
