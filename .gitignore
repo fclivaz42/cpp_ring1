@@ -41,7 +41,8 @@ zombiehorde
 String
 violence
 streplace
+*.replace
 harl
 harlfilter
 fixed
-*.replace
+fixed2
