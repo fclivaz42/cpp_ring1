@@ -3,9 +3,7 @@
 export MAKEFLAGS += --silent
 
 SRCS	= ${SUBDIR}/main.cpp\
-		  ${SUBDIR}/Weapon.cpp\
-		  ${SUBDIR}/HumanA.cpp\
-		  ${SUBDIR}/HumanB.cpp
+		  ${SUBDIR}/Fixed.cpp
 
 SUBDIR	= srcs
 
@@ -27,9 +25,7 @@ NAME	= fixed
 
 INCL	= incl
 
-DEPS	=	${INCL}/Weapon.hpp\
-			${INCL}/HumanA.hpp\
-			${INCL}/HumanB.hpp\
+DEPS	=	${INCL}/FixedClass.hpp\
 			${SRCS}
 
 CRED = \033[1;31m

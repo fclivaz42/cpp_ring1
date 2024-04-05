@@ -6,12 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:45:39 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/04 20:54:49 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/04/05 18:49:55 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/FixedClass.hpp"
-
 
 Fixed::Fixed()
 {
@@ -21,23 +20,30 @@ Fixed::Fixed()
 
 Fixed::Fixed(const Fixed &src)
 {
+	std::cout << "Copy constructor called.\n";
 	this->_fixedNumber = src._fixedNumber;
 }
 
 Fixed& Fixed::operator=(const Fixed &src)
 {
+	std::cout << "Copy assignation constructor called.\n";
+	if (this != &src)
+		this->_fixedNumber = src.getRawBits();
+	return *this;
 }
 
 Fixed::~Fixed()
 {
+	std::cout << "Fixed destructor called.\n";
 }
 
-int Fixed::getRawBits(void)
+int Fixed::getRawBits(void) const
 {
+	std::cout << "getRawBits called.\n";
 	return this->_fixedNumber;
 }
 
-void Fixed::setRawBits(int rawBits)
+void Fixed::setRawBits(int const rawBits)
 {
 	this->_fixedNumber = rawBits;
 }
