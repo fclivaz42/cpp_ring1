@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:02:00 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/04 23:42:45 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/04/07 01:44:43 by fclivaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ int main (int ac, char *av[])
 	const std::string	oldstr = av[2];
 	const std::string	newstr = av[3];
 	
-	readFile.open(path, std::ios::in);
+	readFile.open(path.c_str(), std::ios::in);
 	if (!readFile.is_open()) {
 		std::cerr << "Error opening file with path " << path << std::endl;
 		return 2;
 	}
-	writeFile.open(path.append(".replace"), std::ios::out | std::ios::trunc);
+	writeFile.open(path.append(".replace").c_str(), std::ios::out | std::ios::trunc);
 	if (!writeFile.is_open()) {
 		std::cerr << "Error opening file with path " << path << std::endl;
 		return 3;

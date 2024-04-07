@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:45:39 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/07 02:04:59 by fclivaz          ###   ########.fr       */
+/*   Updated: 2024/04/07 02:05:54 by fclivaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void Fixed::setRawBits(int const rawBits)
 {
 	this->_fixedNumber = rawBits;
 }
+
 
 std::ostream&	operator<<(std::ostream &o, Fixed const &src)
 {
