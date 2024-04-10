@@ -6,36 +6,40 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:45:39 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/07 02:05:54 by fclivaz          ###   ########.fr       */
+/*   Updated: 2024/04/10 18:02:35 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/FixedClass.hpp"
 
+/* ************************************************************************** */
+/*                 Constructors, destructors, all that shizaz                 */
+/* ************************************************************************** */
+
 Fixed::Fixed() : _fixedNumber(0)
 {
-	std::cout << "Default constructor called.\n";
+//	std::cout << "Default constructor called.\n";
 }
 
 Fixed::Fixed(const int init) : _fixedNumber(init<<_fixedPoint)
 {
-	std::cout << "Integer constructor called.\n";
+//	std::cout << "Integer constructor called.\n";
 }
 
 Fixed::Fixed(const float init) : _fixedNumber(roundf(init * (1 << _fixedPoint)))
 {
-	std::cout << "Floating Point constructor called.\n";
+//	std::cout << "Floating Point constructor called.\n";
 }
 
 Fixed::Fixed(const Fixed &src)
 {
-	std::cout << "Copy constructor called.\n";
+//	std::cout << "Copy constructor called.\n";
 	this->_fixedNumber = src._fixedNumber;
 }
 
 Fixed& Fixed::operator=(const Fixed &src)
 {
-	std::cout << "Copy assignation constructor called.\n";
+//	std::cout << "Copy assignation constructor called.\n";
 	if (this != &src)
 		this->_fixedNumber = src.getRawBits();
 	return *this;
@@ -43,8 +47,12 @@ Fixed& Fixed::operator=(const Fixed &src)
 
 Fixed::~Fixed()
 {
-	std::cout << "Fixed destructor called.\n";
+//	std::cout << "Fixed destructor called.\n";
 }
+
+/* ************************************************************************** */
+/*                        Getters, Setters, whatever                          */
+/* ************************************************************************** */
 
 int	Fixed::toInt(void) const
 {
@@ -58,7 +66,7 @@ float	Fixed::toFloat(void) const
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits called.\n";
+//	std::cout << "getRawBits called.\n";
 	return this->_fixedNumber;
 }
 
@@ -67,6 +75,9 @@ void Fixed::setRawBits(int const rawBits)
 	this->_fixedNumber = rawBits;
 }
 
+/* ************************************************************************** */
+/*                              Operator Overloads                            */
+/* ************************************************************************** */
 
 std::ostream&	operator<<(std::ostream &o, Fixed const &src)
 {
