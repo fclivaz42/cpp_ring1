@@ -6,11 +6,19 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:30 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 00:02:26 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/04/12 00:15:05 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/ClapTrapClass.hpp"
+
+ClapTrap::ClapTrap(void)
+{
+	std::cout << "ClapTrap Default constructor called \n";
+	this->_ep = 10;
+	this->_hp = 10;
+	this->_atkdmg = 0;
+}
 
 ClapTrap::ClapTrap(const std::string& Name) : _name(Name)
 {
