@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:45:39 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/10 18:02:35 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/04/11 21:02:24 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,109 @@ void Fixed::setRawBits(int const rawBits)
 {
 	this->_fixedNumber = rawBits;
 }
-
+Fixed& Fixed::min(Fixed& a, Fixed& b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return a;
+	return b;
+}
+const Fixed& Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return a;
+	return b;
+}
+Fixed& Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return a;
+	return b;
+}
+const Fixed& Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return a;
+	return b;
+}
 /* ************************************************************************** */
 /*                              Operator Overloads                            */
 /* ************************************************************************** */
+
+Fixed	Fixed::operator+(const Fixed &src) const
+{
+	return Fixed(this->toFloat() + src.toFloat());
+}
+
+Fixed	Fixed::operator-(const Fixed &src) const
+{
+	return Fixed(this->toFloat() - src.toFloat());
+}
+
+Fixed	Fixed::operator*(const Fixed &src) const
+{
+	return Fixed(this->toFloat() * src.toFloat());
+}
+
+Fixed	Fixed::operator/(const Fixed &src) const
+{
+	return Fixed(this->toFloat() / src.toFloat());
+}
+
+Fixed	Fixed::operator++(int)
+{
+	Fixed	ret(*this);
+	ret._fixedNumber = this->_fixedNumber++;
+	return ret;
+}
+
+Fixed&	Fixed::operator++(void)
+{
+	++this->_fixedNumber;
+	return (*this);
+}
+
+Fixed	Fixed::operator--(int)
+{
+	Fixed	ret(*this);
+	ret._fixedNumber = this->_fixedNumber--;
+	return ret;
+}
+
+Fixed&	Fixed::operator--(void)
+{
+	--this->_fixedNumber;
+	return (*this);
+}
+
+bool	Fixed::operator>(const Fixed &src) const
+{
+	return (this->_fixedNumber > src._fixedNumber);
+}
+
+bool	Fixed::operator>=(const Fixed &src) const
+{
+	return (this->_fixedNumber >= src._fixedNumber);
+}
+
+bool	Fixed::operator<(const Fixed &src) const
+{
+	return (this->_fixedNumber < src._fixedNumber);
+}
+
+bool	Fixed::operator<=(const Fixed &src) const
+{
+	return (this->_fixedNumber <= src._fixedNumber);
+}
+
+bool	Fixed::operator==(const Fixed &src) const
+{
+	return (this->_fixedNumber == src._fixedNumber);
+}
+
+bool	Fixed::operator!=(const Fixed &src) const
+{
+	return (this->_fixedNumber != src._fixedNumber);
+}
 
 std::ostream&	operator<<(std::ostream &o, Fixed const &src)
 {

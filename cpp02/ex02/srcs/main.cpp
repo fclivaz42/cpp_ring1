@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 18:27:20 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/05 18:54:41 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/04/11 21:05:32 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,31 @@ int main(void)
 	Fixed const c( 42.42f );
 	Fixed const d( b );
 
-	a = Fixed( 1234.4321f );
-
 	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-	
+	std::cout << "a is " << ++a << std::endl;
+	std::cout << "a is " << a << std::endl;
+	std::cout << "a is " << a++ << std::endl;
+	std::cout << "a is " << a << std::endl;
+	std::cout << "a + d is " << a + d << std::endl;
+	std::cout << "c - b is " << c - b << std::endl;
+	std::cout << "b / a is " << b / a << std::endl;
+	std::cout << "is a greater than b? ";
+	if (a > b)
+		std::cout << "Yes!\n";
+	else
+		std::cout << "No!\n";
+	std::cout << "is a smaller than c? ";
+	if (a < c)
+		std::cout << "Yes!\n";
+	else
+		std::cout << "No!\n";
+	std::cout << "is b equals to d? ";
+	if (b == d)
+		std::cout << "Yes!\n";
+	else
+		std::cout << "No!\n";
+	std::cout << "max is " << Fixed::max(a, b) << std::endl;
+	std::cout << "min is " << Fixed::min(a, b) << std::endl;
+
 	return 0;
 }

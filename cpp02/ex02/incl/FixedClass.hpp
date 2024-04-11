@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:42:14 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/05 19:27:15 by fclivaz          ###    LAUSANNE.CH      */
+/*   Updated: 2024/04/11 21:02:07 by fclivaz          ###    LAUSANNE.CH      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,38 @@ class Fixed {
 	const static int	_fixedPoint = 8;
 
 	public:
+	/*			Constructors/Destructors			*/
 		Fixed(void);
 		Fixed(const int init);
 		Fixed(const float init);
 		Fixed(Fixed const &src);
-		Fixed& operator=(const Fixed &src);
 		~Fixed(void);
+		Fixed&	operator=(const Fixed &src);
+	/*				Operator Overloads				*/
+		Fixed	operator+(const Fixed &src) const;
+		Fixed	operator-(const Fixed &src) const;
+		Fixed	operator*(const Fixed &src) const;
+		Fixed	operator/(const Fixed &src) const;
+		Fixed	operator++(int);
+		Fixed&	operator++(void);
+		Fixed	operator--(int);
+		Fixed&	operator--(void);
+		bool	operator>(const Fixed &src) const;
+		bool	operator>=(const Fixed &src) const;
+		bool	operator<(const Fixed &src) const;
+		bool	operator<=(const Fixed &src) const;
+		bool	operator==(const Fixed &src) const;
+		bool	operator!=(const Fixed &src) const;
+	/*					Class Methods				*/
 		int		toInt(void) const;
 		float	toFloat(void) const;
 		int		getRawBits(void) const;
 		void	setRawBits(int const rawBits);
+	/*				Static Class Methods			*/
+	static Fixed& min(Fixed &a, Fixed &b);
+	static const Fixed& min(const Fixed &a, const Fixed &b);
+	static Fixed& max(Fixed &a, Fixed &b);
+	static const Fixed& max(const Fixed &a, const Fixed &b);
 };
 
 std::ostream&	operator<<(std::ostream &o, Fixed const &src);
