@@ -5,17 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/12 15:50:59 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/12 15:51:00 by fclivaz          ###   LAUSANNE.ch        #
+#    Created: 2024/04/12 15:50:01 by fclivaz           #+#    #+#              #
+#    Updated: 2024/04/12 15:57:15 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
 export MAKEFLAGS += --silent
 
 SRCS	= ${SUBDIR}/main.cpp\
-		  ${SUBDIR}/Zombie.cpp\
-		  ${SUBDIR}/newZombie.cpp\
-		  ${SUBDIR}/randomChump.cpp
+		  ${SUBDIR}/ClapTrap.cpp\
+		  ${SUBDIR}/ScavTrap.cpp\
+		  ${SUBDIR}/FragTrap.cpp\
+		  ${SUBDIR}/DiamondTrap.cpp
 
 SUBDIR	= srcs
 
@@ -33,12 +34,14 @@ LFLAGS = -I${INCL}
 
 CC	= c++
 
-NAME	= brainz
+NAME	= diamondtrap
 
 INCL	= incl
 
-DEPS	=	${INCL}/Zombie.h\
-			${INCL}/Zombie.hpp\
+DEPS	=	${INCL}/ClapTrapClass.hpp\
+			${INCL}/ScavTrapClass.hpp\
+			${INCL}/FragTrapClass.hpp\
+			${INCL}/DiamondTrapClass.hpp\
 			${SRCS}
 
 CRED = \033[1;31m

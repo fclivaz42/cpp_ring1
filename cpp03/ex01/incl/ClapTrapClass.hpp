@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:29 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 03:54:45 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/12 16:37:43 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ class ClapTrap {
 		int			_ep;
 		int			_atkdmg;
 		std::string	_name;
+		ClapTrap(void);
 		
 	public:
 	/*			Constructors/Destructors			*/
-//		ClapTrap(void);
 		ClapTrap(const std::string &name);
 		ClapTrap(ClapTrap const &src);
 		ClapTrap &operator=(const ClapTrap &src);
