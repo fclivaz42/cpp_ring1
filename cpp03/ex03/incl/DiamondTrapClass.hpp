@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:29 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 16:39:04 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/12 17:22:07 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 class DiamondTrap : public ScavTrap, public FragTrap {
 	private:
 		std::string	_name;
-		using ClapTrap::_name;
 
 	public:
 	/*			Constructors/Destructors			*/
