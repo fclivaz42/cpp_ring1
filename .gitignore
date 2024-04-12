@@ -31,6 +31,7 @@
 *.out
 *.app
 *.log
+*.swp
 Session.vim
 .DS_Store
 megaphone
@@ -49,4 +50,4 @@ fixed2
 FixedFinal
 claptrap
 scavtrap
-*.swp
+fragtrap

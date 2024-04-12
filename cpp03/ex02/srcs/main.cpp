@@ -6,17 +6,19 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:31 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 04:02:07 by fclivaz          ###   LAUSANNE.fr       */
+/*   Updated: 2024/04/12 04:12:02 by fclivaz          ###   LAUSANNE.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/ClapTrapClass.hpp"
 #include "../incl/ScavTrapClass.hpp"
+#include "../incl/FragTrapClass.hpp"
 
 int main(void) {
 
 	ClapTrap	mvillarr("Maria");
 	ScavTrap	ilyanar("Ilkay");
+	FragTrap	fclivaz("Fabien");
 
 	mvillarr.beRepaired(30);
 	ilyanar.guardGate();
