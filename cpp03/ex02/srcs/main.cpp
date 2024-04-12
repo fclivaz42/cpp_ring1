@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:31 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 04:12:02 by fclivaz          ###   LAUSANNE.fr       */
+/*   Updated: 2024/04/12 04:49:13 by fclivaz          ###   LAUSANNE.CH       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,23 @@ int main(void) {
 	mvillarr.beRepaired(1);
 	mvillarr.beRepaired(1);
 	mvillarr.beRepaired(1);
+	fclivaz.highFivesGuys();
 	ilyanar.attack("Maria");
 	mvillarr.takeDamage(20);
+	fclivaz.attack("Ilkay");
+	ilyanar.takeDamage(30);
+	ilyanar.attack("Fabien");
+	fclivaz.takeDamage(20);
+	fclivaz.attack("Ilkay");
+	ilyanar.takeDamage(30);
+	ilyanar.attack("Fabien");
+	fclivaz.takeDamage(20);
+	fclivaz.attack("Ilkay");
+	ilyanar.takeDamage(30);
+	ilyanar.attack("Fabien");
+	fclivaz.takeDamage(20);
+	fclivaz.attack("Ilkay");
+	ilyanar.takeDamage(30);
+	fclivaz.highFivesGuys();
 	return 0;
 }
