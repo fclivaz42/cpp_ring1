@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 16:38:30 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/29 16:52:30 by fclivaz          ###   LAUSANNE.CH       */
+/*   Updated: 2024/03/29 16:52:30 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
