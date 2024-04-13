@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrapClass.hpp                                  :+:      :+:    :+:   */
+/*   ClassClapTrap.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:29 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/11 23:31:39 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:41:33 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAPCLASS_HPP
-# define CLAPTRAPCLASS_HPP
+#ifndef CLASSCLAPTRAP_HPP
+# define CLASSCLAPTRAP_HPP
 
 # include <string>
 # include <iostream>
 # define uint unsigned int
 
 class ClapTrap {
-	private:
+	protected:
 		int			_hp;
 		int			_ep;
 		int			_atkdmg;
 		std::string	_name;
+		ClapTrap(void);
 		
 	public:
 	/*			Constructors/Destructors			*/

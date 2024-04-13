@@ -6,7 +6,7 @@
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 15:50:01 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/12 15:57:15 by fclivaz          ###   LAUSANNE.ch        #
+#    Updated: 2024/04/13 20:50:37 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,10 +38,10 @@ NAME	= diamondtrap
 
 INCL	= incl
 
-DEPS	=	${INCL}/ClapTrapClass.hpp\
-			${INCL}/ScavTrapClass.hpp\
-			${INCL}/FragTrapClass.hpp\
-			${INCL}/DiamondTrapClass.hpp\
+DEPS	=	${INCL}/ClassClapTrap.hpp\
+			${INCL}/ClassScavTrap.hpp\
+			${INCL}/ClassFragTrap.hpp\
+			${INCL}/ClassDiamondTrap.hpp\
 			${SRCS}
 
 CRED = \033[1;31m

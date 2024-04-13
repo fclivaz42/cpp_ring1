@@ -6,7 +6,7 @@
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 15:54:07 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/12 15:54:08 by fclivaz          ###   LAUSANNE.ch        #
+#    Updated: 2024/04/13 20:35:47 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,8 @@ NAME	= scavtrap
 
 INCL	= incl
 
-DEPS	=	${INCL}/ClapTrapClass.hpp\
-			${INCL}/ScavTrapClass.hpp\
+DEPS	=	${INCL}/ClassClapTrap.hpp\
+			${INCL}/ClassScavTrap.hpp\
 			${SRCS}
 
 CRED = \033[1;31m

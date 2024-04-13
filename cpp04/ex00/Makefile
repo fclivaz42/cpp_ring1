@@ -5,15 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/12 15:53:29 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/13 20:22:36 by fclivaz          ###   LAUSANNE.ch        #
+#    Created: 2024/04/12 15:50:01 by fclivaz           #+#    #+#              #
+#    Updated: 2024/04/13 20:24:38 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
 export MAKEFLAGS += --silent
 
 SRCS	= ${SUBDIR}/main.cpp\
-		  ${SUBDIR}/Fixed.cpp
+		  ${SUBDIR}/Cat.cpp\
+		  ${SUBDIR}/Dog.cpp
 
 SUBDIR	= srcs
 
@@ -31,11 +32,12 @@ LFLAGS = -I${INCL}
 
 CC	= c++
 
-NAME	= fixed
+NAME	= wronganimal
 
 INCL	= incl
 
-DEPS	=	${INCL}/ClassFixed.hpp\
+DEPS	=	${INCL}/ClassCat.hpp\
+			${INCL}/ClassDog.hpp\
 			${SRCS}
 
 CRED = \033[1;31m

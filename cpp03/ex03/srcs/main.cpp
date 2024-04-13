@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:31 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 16:35:25 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:49:12 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/DiamondTrapClass.hpp"
+#include "../incl/ClassDiamondTrap.hpp"
 
 int main(void) {
 

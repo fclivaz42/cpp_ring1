@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:30 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 04:15:42 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:35:56 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ScavTrapClass.hpp"
+#include "../incl/ClassScavTrap.hpp"
 
 ScavTrap::ScavTrap(const std::string& Name) : ClapTrap(Name)
 {
@@ -58,5 +58,9 @@ void	ScavTrap::attack(const std::string &target)
 
 void	ScavTrap::guardGate()
 {
+	if (this->_ep > 0)
 		std::cout << "ScavTrap " << this->_name << " enters GateKeeper mode!\n";
+	else
+		std::cout << "ScavTrap " << this->_name << " is missing energy and could not GateKeep!\n";
+	--this->_ep;
 }

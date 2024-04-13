@@ -6,7 +6,7 @@
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 15:53:34 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/12 15:53:35 by fclivaz          ###   LAUSANNE.ch        #
+#    Updated: 2024/04/13 20:07:05 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ NAME	= fixed2
 
 INCL	= incl
 
-DEPS	=	${INCL}/FixedClass.hpp\
+DEPS	=	${INCL}/ClassFixed.hpp\
 			${SRCS}
 
 CRED = \033[1;31m

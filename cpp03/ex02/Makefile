@@ -6,7 +6,7 @@
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 15:50:01 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/12 15:50:05 by fclivaz          ###   LAUSANNE.ch        #
+#    Updated: 2024/04/13 20:45:52 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,9 +37,9 @@ NAME	= fragtrap
 
 INCL	= incl
 
-DEPS	=	${INCL}/ClapTrapClass.hpp\
-			${INCL}/ScavTrapClass.hpp\
-			${INCL}/FragTrapClass.hpp\
+DEPS	=	${INCL}/ClassClapTrap.hpp\
+			${INCL}/ClassScavTrap.hpp\
+			${INCL}/ClassFragTrap.hpp\
 			${SRCS}
 
 CRED = \033[1;31m

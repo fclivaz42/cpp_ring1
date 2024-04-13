@@ -6,13 +6,13 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:31 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 15:55:37 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:45:12 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ClapTrapClass.hpp"
-#include "../incl/ScavTrapClass.hpp"
-#include "../incl/FragTrapClass.hpp"
+#include "../incl/ClassClapTrap.hpp"
+#include "../incl/ClassScavTrap.hpp"
+#include "../incl/ClassFragTrap.hpp"
 
 int main(void) {
 

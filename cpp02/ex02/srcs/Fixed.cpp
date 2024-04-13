@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:45:39 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/11 21:02:24 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:26:22 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/FixedClass.hpp"
+#include "../incl/ClassFixed.hpp"
 
 /* ************************************************************************** */
 /*                 Constructors, destructors, all that shizaz                 */

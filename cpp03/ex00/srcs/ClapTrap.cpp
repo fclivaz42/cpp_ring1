@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:30 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 00:02:26 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:28:10 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ClapTrapClass.hpp"
+#include "../incl/ClassClapTrap.hpp"
 
 ClapTrap::ClapTrap(const std::string& Name) : _name(Name)
 {

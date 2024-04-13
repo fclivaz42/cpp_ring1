@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FixedClass.hpp                                     :+:      :+:    :+:   */
+/*   ClassFixed.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:42:14 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/05 19:27:15 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:06:40 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXEDCLASS_HPP
-# define FIXEDCLASS_HPP
+#ifndef CLASSFIXED_HPP
+# define CLASSFIXED_HPP
 
 # include <iostream>
 # include <cmath>

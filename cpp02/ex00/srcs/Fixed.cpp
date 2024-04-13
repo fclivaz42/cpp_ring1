@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:45:39 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/05 18:49:55 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:08:15 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/FixedClass.hpp"
+#include "../incl/ClassFixed.hpp"
 
 Fixed::Fixed()
 {

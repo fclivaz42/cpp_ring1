@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:31 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/11 23:39:09 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:28:16 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ClapTrapClass.hpp"
+#include "../incl/ClassClapTrap.hpp"
 
 int main(void) {
 

@@ -6,11 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:30 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/12 03:55:14 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 20:28:10 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ClapTrapClass.hpp"
+#include "../incl/ClassClapTrap.hpp"
 
 ClapTrap::ClapTrap(const std::string& Name) : _name(Name)
 {
@@ -59,20 +59,20 @@ void	ClapTrap::attack(const std::string &target)
 void	ClapTrap::takeDamage(uint amount)
 {
 	this->_hp -= amount;
-	std::cout << this->_name << " takes "
+	std::cout << "ClapTrap " << this->_name << " takes "
 		<< amount << " points of damage!\n";
 	if (this->_hp < 0)
-		std::cout << this->_name << " succumbs to its wounds!\n";
+		std::cout << "ClapTrap " << this->_name << " succumbs to its wounds!\n";
 }
 
 void	ClapTrap::beRepaired(uint amount)
 {
 	if (this->_ep > 0) {
 		this->_hp += amount;
-		std::cout << this->_name << " repairs "
+		std::cout << "ClapTrap " << this->_name << " repairs "
 		<< amount << " damage!\n";
 	}
 	else
-		std::cout << this->_name << " is missing energy and could not repair!\n";
+		std::cout << "ClapTrap " << this->_name << " is missing energy and could not repair!\n";
 	--this->_ep;
 }
