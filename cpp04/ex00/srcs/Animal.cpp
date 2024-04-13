@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:58:41 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/13 21:09:40 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/13 21:12:10 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ClassCat.hpp"
+#include "../incl/ClassAnimal.hpp"
 
-Cat::Cat(void)
+Animal::Animal(void)
 {
-	this->_type = "Cat";
+	this->_type = "Abstract Animal";
 }
 
-Cat::~Cat()
+Animal::~Animal()
 {
 }

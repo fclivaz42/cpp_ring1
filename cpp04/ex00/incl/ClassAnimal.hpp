@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   ClassAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 20:58:41 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/13 21:09:40 by fclivaz          ###   LAUSANNE.ch       */
+/*   Created: 2024/04/13 20:54:23 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/04/13 21:11:33 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ClassCat.hpp"
+#ifndef CLASSANIMAL_HPP
+# define CLASSANIMAL_HPP
 
-Cat::Cat(void)
-{
-	this->_type = "Cat";
-}
+# include <string>
 
-Cat::~Cat()
-{
-}
+class Animal {
+	protected:
+		std::string	_type;
+	
+	public:
+		Animal(void);
+		Animal(const Animal &src);
+		Animal &operator=(const Animal &src);
+		~Animal(void);
+
+};
+#endif
