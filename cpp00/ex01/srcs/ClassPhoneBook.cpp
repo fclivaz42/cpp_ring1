@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 15:06:24 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/26 18:28:32 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/15 17:59:28 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ void	PhoneBook::Search(void)
 
 void	PhoneBook::Add(int id)
 {
-	++this->_count;
+	if (this->_count < 8)
+		++this->_count;
 	this->_ct[id].CreateContact();
 }
