@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 20:09:00 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/03/30 17:02:14 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/15 18:40:03 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ int main(int ac, char *av[])
 		return 0;
 	}
 	output.complain(av[1]);
+	return 0;
 }

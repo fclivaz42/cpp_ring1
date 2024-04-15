@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:58:41 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/15 20:07:26 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/15 20:07:49 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ClassCat.hpp"
+#include "../incl/ClassWrongCat.hpp"
 
-Cat::Cat(void)
+WrongCat::WrongCat(void)
 {
-	this->_type = "Cat";
-	std::cout << "Cat constructor called.\n";
+	this->_type = "WrongCat";
+	std::cout << "WrongCat constructor called.\n";
 }
 
-Cat::Cat(const Cat &src)
+WrongCat::WrongCat(const WrongCat &src)
 {
-	std::cout << "Cat copy constructor called.\n";
+	std::cout << "WrongCat copy constructor called.\n";
 	this->_type = src._type;
 }
 
-Cat&	Cat::operator=(const Cat &src)
+WrongCat&	WrongCat::operator=(const WrongCat &src)
 {
-	std::cout << "Cat copy assignation constructor called.\n";
+	std::cout << "WrongCat copy assignation constructor called.\n";
 	if (this != &src) {
 		this->_type = src._type;
 	}
 	return *this;
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-	std::cout << "Cat destructor called.\n";
+	std::cout << "WrongCat destructor called.\n";
 }
 
-void	Cat::makeSound(void) const
+void	WrongCat::makeSound(void) const
 {
-	std::cout << "MEOW MEOW MEOW MEOW MEOW\n";
+	std::cout << "MWOE MWOE MWOE MWOE\n";
 }

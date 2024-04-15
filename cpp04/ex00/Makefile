@@ -6,14 +6,17 @@
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 15:50:01 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/13 20:24:38 by fclivaz          ###   LAUSANNE.ch        #
+#    Updated: 2024/04/15 20:19:05 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
 export MAKEFLAGS += --silent
 
 SRCS	= ${SUBDIR}/main.cpp\
+		  ${SUBDIR}/Animal.cpp\
+		  ${SUBDIR}/WrongAnimal.cpp\
 		  ${SUBDIR}/Cat.cpp\
+		  ${SUBDIR}/WrongCat.cpp\
 		  ${SUBDIR}/Dog.cpp
 
 SUBDIR	= srcs
@@ -28,7 +31,7 @@ OBJTREE	= $(SRCTREE:srcs%=${OBJDIR}%)
 
 CFLAGS	= -Wall -Werror -Wextra -O2 -std=c++98
 
-LFLAGS = -I${INCL}
+LFLAGS = -I${INCL} 
 
 CC	= c++
 
@@ -36,7 +39,10 @@ NAME	= wronganimal
 
 INCL	= incl
 
-DEPS	=	${INCL}/ClassCat.hpp\
+DEPS	=	${INCL}/ClassAnimal.hpp\
+			${INCL}/ClassWrongAnimal.hpp\
+			${INCL}/ClassCat.hpp\
+			${INCL}/ClassWrongCat.hpp\
 			${INCL}/ClassDog.hpp\
 			${SRCS}
 
