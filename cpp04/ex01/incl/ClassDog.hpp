@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:54:23 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/15 20:52:22 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/19 18:37:28 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Dog : public Animal {
 		Dog &operator=(const Dog &src);
 		~Dog(void);
 		void	makeSound(void) const;
+		void	printIdeas(void) const;
 
 };
 #endif

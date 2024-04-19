@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 19:04:21 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 18:34:38 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/19 19:54:29 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 void	realAnimals()
 {
-	Animal	blobOfCells;
-	Animal* kitty = new Cat;
+//	absAnimal	blobOfCells;	// <-- doesnt work
+	absAnimal* kitty = new Cat;
 	Dog	doggo;
 	
-	std::cout << blobOfCells.getType() << std::endl;
+//	std::cout << blobOfCells.getType() << std::endl;
 	std::cout << kitty->getType() << std::endl;
 	std::cout << doggo.getType() << std::endl;
-	blobOfCells.makeSound();
+//	blobOfCells.makeSound();
 	doggo.makeSound();
 	kitty->makeSound();
 	delete kitty;
@@ -31,7 +31,7 @@ void	realAnimals()
 void	fileTests(void)
 {
 	std::cout << "------Create Array------\n";
-	const Animal* pets[AMOUNT] = {new Dog, new Dog, new Dog, new Cat, new Cat, new Cat};
+	const absAnimal* pets[AMOUNT] = {new Dog, new Dog, new Dog, new Cat, new Cat, new Cat};
 
 	std::cout << "------Delete Array------\n";
 	for (int i = 0; i < AMOUNT; i++) {

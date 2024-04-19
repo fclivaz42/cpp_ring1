@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassAnimal.hpp                                    :+:      :+:    :+:   */
+/*   ClassIMateriaSource.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 20:54:23 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 18:15:28 by fclivaz          ###   LAUSANNE.ch       */
+/*   Created: 2024/04/19 20:50:26 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/04/19 21:46:05 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSANIMAL_HPP
-# define CLASSANIMAL_HPP
+#ifndef CLASSIMATERIASOURCE_HPP
+# define CLASSIMATERIASOURCE_HPP
 
-# include <string>
-# include <iostream>
-# define AMOUNT 6
+#include <string>
 
-class Animal {
-	protected:
-		std::string	_type;
-	
+class AMateria;
+
+class IMateriaSource {
 	public:
-		Animal(void);
-		Animal(const Animal &src);
-		Animal &operator=(const Animal &src);
-		virtual ~Animal(void);
-
-		std::string	getType(void) const;
-		virtual void	makeSound(void) const;
-
+		virtual ~IMateriaSource();
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 };
+
 #endif

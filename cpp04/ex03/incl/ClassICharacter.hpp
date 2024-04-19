@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassAnimal.hpp                                    :+:      :+:    :+:   */
+/*   ClassICharacter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 20:54:23 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 18:15:28 by fclivaz          ###   LAUSANNE.ch       */
+/*   Created: 2024/04/19 20:14:15 by fclivaz           #+#    #+#             */
+/*   Updated: 2024/04/19 20:48:17 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSANIMAL_HPP
-# define CLASSANIMAL_HPP
+#ifndef CLASSICHARACTER_HPP
+# define CLASSICHARACTER_HPP
 
 # include <string>
-# include <iostream>
-# define AMOUNT 6
 
-class Animal {
-	protected:
-		std::string	_type;
-	
+class AMateria;
+
+class ICharacter {
 	public:
-		Animal(void);
-		Animal(const Animal &src);
-		Animal &operator=(const Animal &src);
-		virtual ~Animal(void);
-
-		std::string	getType(void) const;
-		virtual void	makeSound(void) const;
+		virtual ~ICharacter(void);
+		virtual const std::string&	getName(void) const = 0;
+		virtual void				equip(AMateria* m) = 0;
+		virtual void				unequip(int idx) = 0;
+		virtual void				use(int idx, ICharacter& target) = 0;
 
 };
+
 #endif

@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassAnimal.hpp                                    :+:      :+:    :+:   */
+/*   ClassDog.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:54:23 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 18:15:28 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/19 19:53:31 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSANIMAL_HPP
-# define CLASSANIMAL_HPP
+#ifndef CLASSDOG_HPP
+# define CLASSDOG_HPP
 
-# include <string>
-# include <iostream>
-# define AMOUNT 6
+# include "ClassAnimal.hpp"
+#include "ClassBrain.hpp"
 
-class Animal {
-	protected:
-		std::string	_type;
-	
+class Dog : public absAnimal {
+	private:
+		Brain	*_dogBrain;
+
 	public:
-		Animal(void);
-		Animal(const Animal &src);
-		Animal &operator=(const Animal &src);
-		virtual ~Animal(void);
-
-		std::string	getType(void) const;
-		virtual void	makeSound(void) const;
+		Dog(void);
+		Dog(const Dog &src);
+		Dog &operator=(const Dog &src);
+		~Dog(void);
+		void	makeSound(void) const;
+		void	printIdeas(void) const;
 
 };
 #endif

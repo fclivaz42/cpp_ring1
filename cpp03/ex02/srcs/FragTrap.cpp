@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:30 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/13 20:44:28 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/19 22:01:55 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ FragTrap::~FragTrap(void)
 
 void	FragTrap::attack(const std::string &target)
 {
-	if (this->_ep > 0)
+	if (this->_ep > 0 && this->_hp > 0)
 		std::cout << "FragTrap " << this->_name << " attacks "
 		<< target << ", causing " << this->_atkdmg << " damage!\n";
 	else

@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:54:23 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/15 20:51:55 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/19 18:27:59 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Cat : public Animal {
 		Cat &operator=(const Cat &src);
 		~Cat(void);
 		void	makeSound(void) const;
+		void	printIdeas(void) const;
 
 };
 #endif

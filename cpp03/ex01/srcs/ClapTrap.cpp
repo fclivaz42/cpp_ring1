@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:25:30 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/13 20:28:10 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/19 22:02:23 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ ClapTrap::~ClapTrap(void)
 
 void	ClapTrap::attack(const std::string &target)
 {
-	if (this->_ep > 0)
+	if (this->_ep > 0 && this->_hp > 0)
 		std::cout << "ClapTrap " << this->_name << " attacks "
 		<< target << ", causing " << this->_atkdmg << " damage!\n";
 	else
@@ -61,13 +61,13 @@ void	ClapTrap::takeDamage(uint amount)
 	this->_hp -= amount;
 	std::cout << "ClapTrap " << this->_name << " takes "
 		<< amount << " points of damage!\n";
-	if (this->_hp < 0)
+	if (this->_hp <= 0)
 		std::cout << "ClapTrap " << this->_name << " succumbs to its wounds!\n";
 }
 
 void	ClapTrap::beRepaired(uint amount)
 {
-	if (this->_ep > 0) {
+	if (this->_ep > 0 && this->_hp > 0) {
 		this->_hp += amount;
 		std::cout << "ClapTrap " << this->_name << " repairs "
 		<< amount << " damage!\n";
