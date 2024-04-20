@@ -6,7 +6,7 @@
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 15:50:01 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/19 20:05:49 by fclivaz          ###   LAUSANNE.ch        #
+#    Updated: 2024/04/20 19:47:24 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ export MAKEFLAGS += --silent
 
 SRCS	= ${SUBDIR}/main.cpp\
 		  ${SUBDIR}/AMateria.cpp\
-		  ${SUBDIR}/Cure.cpp\
-		  ${SUBDIR}/Ice.cpp\
-		  ${SUBDIR}/ICharacter.cpp\
+		  ${SUBDIR}/MateriaCure.cpp\
+		  ${SUBDIR}/MateriaIce.cpp\
+		  ${SUBDIR}/MateriaSource.cpp\
 		  ${SUBDIR}/Character.cpp
 
 SUBDIR	= srcs
@@ -42,8 +42,10 @@ INCL	= incl
 DEPS	=	${INCL}/ClassICharacter.hpp\
 			${INCL}/ClassCharacter.hpp\
 			${INCL}/ClassAMateria.hpp\
-			${INCL}/ClassCure.hpp\
-			${INCL}/ClassIce.hpp\
+			${INCL}/ClassIMateriaSource.hpp\
+			${INCL}/ClassMateriaCure.hpp\
+			${INCL}/ClassMateriaIce.hpp\
+			${INCL}/ClassMateriaSource.hpp\
 			${SRCS}
 
 CRED = \033[1;31m

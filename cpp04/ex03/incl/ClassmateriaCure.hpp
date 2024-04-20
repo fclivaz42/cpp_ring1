@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassmateriaCure.hpp                               :+:      :+:    :+:   */
+/*   ClassMateriaCure.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:21:39 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 21:30:54 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/20 19:39:46 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLASSMATERIACURE_HPP
 # define CLASSMATERIACURE_HPP
 
-#include "ClassAMateria.hpp"
+# include "ClassAMateria.hpp"
 
 class Cure: public AMateria {
 	public:

@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:44:23 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 21:59:09 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/20 20:23:55 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,16 @@
 class MateriaSource : public IMateriaSource {
 	private:
 		AMateria*	_materias[4];
+		int			_inUse;
+
 	public:
 		MateriaSource();
 		MateriaSource(const MateriaSource &src);
 		MateriaSource &operator=(const MateriaSource &src);
 		~MateriaSource();
-		void learnMateria(AMateria*);
-		AMateria* createMateria(std::string const & type);
+
+		void learnMateria(AMateria* src);
+		AMateria* createMateria(const std::string& type);
 };
-
-MateriaSource::MateriaSource() {
-}
-
-MateriaSource::~MateriaSource() {
-}	
 
 #endif

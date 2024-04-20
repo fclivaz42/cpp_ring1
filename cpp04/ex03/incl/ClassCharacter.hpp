@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:28:36 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 21:42:15 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/20 21:40:57 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 #ifndef CLASSCHARACTER_HPP
 # define CLASSCHARACTER_HPP
 
-#include "ClassICharacter.hpp"
-#include "ClassMateriaIce.hpp"
-#include "ClassMateriaFire.hpp"
-#include "ClassMateriaCure.hpp"
+# include "ClassICharacter.hpp"
 
 class Character : public ICharacter {
 	private:
-		AMateria*	_slots[4];	
+		int			_inUse;
+		AMateria*	_slots[4];
 		std::string	_name;
-		Character();
+		Character(void);
 		
 	public:
 		Character(const std::string& Name);
