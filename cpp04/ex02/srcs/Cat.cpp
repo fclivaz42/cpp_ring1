@@ -6,12 +6,11 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:58:41 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 18:31:13 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/21 06:00:24 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/ClassCat.hpp"
-#include <iostream>
 
 Cat::Cat(void)
 {
@@ -20,7 +19,7 @@ Cat::Cat(void)
 	this->_catBrain = new Brain;
 }
 
-Cat::Cat(const Cat &src)
+Cat::Cat(const Cat &src) 
 {
 	std::cout << "Cat copy constructor called.\n";
 	this->_type = src._type;
@@ -33,6 +32,7 @@ Cat&	Cat::operator=(const Cat &src)
 	if (this != &src) {
 		this->_type = src._type;
 		this->_catBrain = new Brain(*src._catBrain);
+		delete src._catBrain;
 	}
 	return *this;
 }

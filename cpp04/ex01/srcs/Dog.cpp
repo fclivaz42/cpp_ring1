@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:58:41 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 18:37:38 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/21 05:58:08 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Dog&	Dog::operator=(const Dog &src)
 	if (this != &src) {
 		this->_type = src._type;
 		this->_dogBrain = new Brain(*src._dogBrain);
+		delete src._dogBrain;
 	}
 	return *this;
 }

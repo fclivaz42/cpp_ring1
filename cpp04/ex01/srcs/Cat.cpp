@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:58:41 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/19 18:31:13 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/21 05:57:56 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ Cat&	Cat::operator=(const Cat &src)
 	if (this != &src) {
 		this->_type = src._type;
 		this->_catBrain = new Brain(*src._catBrain);
+		delete src._catBrain;
 	}
 	return *this;
 }
