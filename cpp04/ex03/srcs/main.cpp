@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:12:17 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/20 21:43:22 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/21 04:20:02 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,19 @@ int main(void)
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	ICharacter* bob = new Character("bob");
+	Character* bob2 = new Character("bob2");
+	bob2->equip(src->createMateria("ice"));
 	ICharacter* jesus = new Character("Jesus");
+	bob2->unequip(0);
+	ICharacter*	jack = new Character(*bob2);
 	me->use(0, *bob);
 	me->use(1, *jesus);
+	jesus->use(0, *jack);
 	delete src;
 	delete bob;
+	delete bob2;
 	delete me;
 	delete jesus;
+	delete jack;
 	return 0;
 }

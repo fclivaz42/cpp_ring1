@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:28:36 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/20 21:40:57 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/21 03:36:52 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,19 @@
 
 # include "ClassICharacter.hpp"
 
+typedef struct sMList {
+	AMateria*		ptr;
+	struct sMList	*next;
+}	tMateriaList;
+
 class Character : public ICharacter {
 	private:
 		int			_inUse;
 		AMateria*	_slots[4];
+		sMList*		_dropped;
 		std::string	_name;
 		Character(void);
+		void	dropMateria(AMateria *dropped);
 		
 	public:
 		Character(const std::string& Name);

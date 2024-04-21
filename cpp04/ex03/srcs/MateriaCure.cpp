@@ -6,14 +6,14 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:49:48 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/21 01:27:19 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/21 04:10:25 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/ClassMateriaCure.hpp"
 #include "../incl/ClassICharacter.hpp"
 
-Cure::Cure(void) : AMateria("ice")
+Cure::Cure(void) : AMateria("cure")
 {
 	std::cout << "Cure constructor called.\n";
 }
@@ -26,7 +26,8 @@ Cure::Cure(const Cure &src) : AMateria(src._type)
 Cure& Cure::operator=(const Cure &src)
 {
 	std::cout << "Cure = operator called.\n";
-	*this = src;
+	if (this != &src)
+		*this = src;
 	return *this;
 }
 

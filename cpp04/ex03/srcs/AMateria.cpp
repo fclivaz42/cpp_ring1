@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:15:46 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/20 21:17:34 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/21 04:10:49 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ AMateria::AMateria (void)
 
 AMateria::AMateria(const std::string &type) : _type(type)
 {
-	std::cout << "AMateria String Constructor Called with type" << type << std::endl;
+	std::cout << "AMateria String Constructor Called with type " << type << std::endl;
 }
 
 AMateria::AMateria(const AMateria& src)
@@ -31,7 +31,8 @@ AMateria::AMateria(const AMateria& src)
 AMateria&	AMateria::operator=(const AMateria& src)
 {
 	std::cout << "AMateria = operator called.\n";
-	*this = src;
+	if (this != &src)
+		*this = src;
 	return *this;
 }
 
@@ -43,4 +44,10 @@ AMateria::~AMateria (void)
 const std::string&	AMateria::getType(void) const
 {
 	return this->_type;
+}
+
+void	AMateria::use(ICharacter &target)
+{
+	(void)target;
+	std::cout<< "This shouldnt pop up!\n";
 }

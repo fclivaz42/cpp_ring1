@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 19:49:48 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/21 01:27:13 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/21 02:42:11 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ Ice::Ice(const Ice &src) : AMateria(src._type)
 Ice& Ice::operator=(const Ice &src)
 {
 	std::cout << "Ice = operator called.\n";
-	*this = src;
+	if (this != &src)
+		*this = src;
 	return *this;
 }
 
