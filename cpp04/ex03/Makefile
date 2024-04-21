@@ -6,7 +6,7 @@
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 15:50:01 by fclivaz           #+#    #+#              #
-#    Updated: 2024/04/21 04:26:32 by fclivaz          ###   LAUSANNE.ch        #
+#    Updated: 2024/04/21 05:34:10 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,11 +31,11 @@ OBJTREE	= $(SRCTREE:srcs%=${OBJDIR}%)
 
 CFLAGS	= -Wall -Werror -Wextra -O2 -std=c++98
 
-LFLAGS = -I${INCL} -g3
+LFLAGS = -I${INCL} -g3 
 
 CC	= c++
 
-NAME	= materia 
+NAME	= materia
 
 INCL	= incl
 

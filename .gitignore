@@ -32,6 +32,7 @@
 *.app
 *.log
 *.swp
+vgcore.*
 Session.vim
 .DS_Store
 megaphone
