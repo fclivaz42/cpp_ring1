@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:54:23 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/15 20:16:34 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2024/04/27 21:10:46 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class WrongAnimal {
 		virtual ~WrongAnimal(void);
 
 		std::string	getType(void) const;
-		virtual void	makeSound(void) const;
+		void	makeSound(void) const;
 
 };
 #endif
