@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 20:45:39 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/13 20:25:14 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2025/01/06 17:56:59 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,16 @@ Fixed::Fixed(const float init) : _fixedNumber(roundf(init * (1 << _fixedPoint)))
 	std::cout << "Floating Point constructor called.\n";
 }
 
-Fixed::Fixed(const Fixed &src)
+Fixed::Fixed(const Fixed &src) : _fixedNumber(src._fixedNumber)
 {
 	std::cout << "Copy constructor called.\n";
-	this->_fixedNumber = src._fixedNumber;
 }
 
 Fixed& Fixed::operator=(const Fixed &src)
 {
 	std::cout << "Copy assignation constructor called.\n";
 	if (this != &src)
-		this->_fixedNumber = src.getRawBits();
+		this->_fixedNumber = src._fixedNumber;
 	return *this;
 }
 
@@ -48,7 +47,7 @@ Fixed::~Fixed()
 
 int	Fixed::toInt(void) const
 {
-	return this->_fixedNumber>>this->_fixedPoint;
+	return this->_fixedNumber >> this->_fixedPoint;
 }
 
 float	Fixed::toFloat(void) const

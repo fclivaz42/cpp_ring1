@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 18:27:20 by fclivaz           #+#    #+#             */
-/*   Updated: 2024/04/13 20:26:27 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2025/01/06 19:40:41 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,15 @@ int main(void)
 	std::cout << "a is " << a << std::endl;
 	std::cout << "a + d is " << a + d << std::endl;
 	std::cout << "c - b is " << c - b << std::endl;
+	std::cout << "a * c is " << a * c << std::endl;
 	std::cout << "b / a is " << b / a << std::endl;
+	std::cout << "b / 0 is " << b / Fixed(0) << std::endl;
 	std::cout << "is a greater than b? ";
-	if (a > b)
-		std::cout << "Yes!\n";
-	else
-		std::cout << "No!\n";
+	std::cout << (a > b ? "Yes!\n" : "No!\n");
 	std::cout << "is a smaller than c? ";
-	if (a < c)
-		std::cout << "Yes!\n";
-	else
-		std::cout << "No!\n";
+	std::cout << (a < c ? "Yes!\n" : "No!\n");
 	std::cout << "is b equals to d? ";
-	if (b == d)
-		std::cout << "Yes!\n";
-	else
-		std::cout << "No!\n";
+	std::cout << (b == d ? "Yes!\n" : "No!\n");
 	std::cout << "max is " << Fixed::max(a, b) << std::endl;
 	std::cout << "min is " << Fixed::min(a, b) << std::endl;
 

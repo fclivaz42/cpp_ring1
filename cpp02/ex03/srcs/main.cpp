@@ -6,30 +6,23 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 18:27:20 by fclivaz           #+#    #+#             */
-/*   Updated: 2025/01/06 17:55:29 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2025/01/08 17:49:56 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ClassFixed.hpp"
+#include "../incl/ClassPoint.hpp"
+#include "../incl/ClassBSP.hpp"
 
 int main(void)
 {
-	Fixed a;
-	Fixed const b( 10 );
-	Fixed const c( 42.42f );
-	Fixed const d( b );
+	Point	a;
+	Point	x(12.2f, 4.0f);
+	Point	y(5.2f, -1.0f);
+	Point	z(6.0f, 6.0f);
+	Point	test(6.0f, 6.0f);
+	Point	test2(50.0f, 50.0f);
 
-	a = Fixed( 1234.4321f );
-
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-	
+	std::cout << "Is test inside of the triangle...? " << (BSP::bsp(x, y, z, test)? "Yes" : "No") << "!\n";
+	std::cout << "Is tes2 inside of the triangle...? " << (BSP::bsp(x, y, z, test2)? "Yes" : "No") << "!\n";
 	return 0;
 }
