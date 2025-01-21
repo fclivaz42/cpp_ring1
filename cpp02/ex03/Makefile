@@ -6,15 +6,16 @@
 #    By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 15:53:39 by fclivaz           #+#    #+#              #
-#    Updated: 2025/01/06 20:32:22 by fclivaz          ###   LAUSANNE.ch        #
+#    Updated: 2025/01/21 19:17:41 by fclivaz          ###   LAUSANNE.ch        #
 #                                                                              #
 # **************************************************************************** #
 
 export MAKEFLAGS += --silent
 
-SRCS	= ${SUBDIR}/main.cpp\
-		  ${SUBDIR}/Point.cpp\
-		  ${SUBDIR}/Fixed.cpp
+SRCS	= ${SUBDIR}/main.cpp \
+		  ${SUBDIR}/Point.cpp \
+		  ${SUBDIR}/Fixed.cpp \
+		  ${SUBDIR}/BSP.cpp
 
 SUBDIR	= srcs
 
@@ -36,8 +37,9 @@ NAME	= BSP
 
 INCL	= incl
 
-DEPS	=	${INCL}/ClassFixed.hpp\
-			${INCL}/ClassPoint.hpp\
+DEPS	=	${INCL}/ClassFixed.hpp \
+			${INCL}/ClassPoint.hpp \
+			${INCL}/ClassBSP.hpp \
 			${SRCS}
 
 CRED = \033[1;31m

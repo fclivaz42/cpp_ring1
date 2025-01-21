@@ -6,7 +6,7 @@
 /*   By: fclivaz <fclivaz@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 20:33:34 by fclivaz           #+#    #+#             */
-/*   Updated: 2025/01/08 17:44:00 by fclivaz          ###   LAUSANNE.ch       */
+/*   Updated: 2025/01/21 20:14:19 by fclivaz          ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,21 @@ Point&	Point::operator=(const Point& src)
 Point::~Point()
 {}
 
-const Fixed& Point::getX(void)
+bool	Point::operator==(const Point& src)
+{
+	return ((src.x == this->x) && (src.y == this->y));
+}
+
+bool	Point::operator==(const Point& src) const
+{
+	return ((src.x == this->x) && (src.y == this->y));
+}
+
+const Fixed& Point::getX(void) const
 {
 	return x;
 }
-const Fixed& Point::getY(void)
+const Fixed& Point::getY(void) const
 {
 	return y;
 }
